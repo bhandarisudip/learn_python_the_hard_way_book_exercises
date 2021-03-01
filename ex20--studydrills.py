@@ -16,6 +16,7 @@ def rewind(f):
 
 #define print_a_line function that takes two parameters, line_count and f
 def print_a_line(line_count, f): 
+	print("line count=", line_count, "current line=", current_line)
 #print the line count, and then read one entire line from the file using "readline"
 	print(line_count, f.readline())
 
@@ -43,11 +44,11 @@ current_line = 1
 print_a_line(current_line, current_file)
 
 #add value '1' to the current_line
-current_line = current_line + 1
+current_line += 1
 #call the function print_a_line, and give it two arguments: current_line and current_file
 print_a_line(current_line, current_file)
 
 #add value '1' to the current_line again
-current_line = current_line + 1
+current_line = current_line += 1
 #call the function print_a_line, and give it two arguments: current_line and current_file
 print_a_line(current_line, current_file)
