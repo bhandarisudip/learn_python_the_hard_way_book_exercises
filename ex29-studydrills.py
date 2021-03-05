@@ -3,7 +3,7 @@ cats = 30
 dogs = 15 
 
 if people < cats:
-print("Too many cats! The world is doomed!")
+	print("Too many cats! The world is doomed!")
 
 if people > cats:
 	print("Not many cats! The world is saved!")
@@ -24,3 +24,12 @@ if people <= dogs:
 	
 if people == dogs: 
 	print("People are dogs")
+
+
+dogs +=5
+
+if (people<dogs) and (dogs<cats): 
+	print('Dogs are less than cats, but still they rule the world.')
+
+if (dogs == cats) and (cats == people): 
+	print('There are equal number of cats, dogs, and people.')
