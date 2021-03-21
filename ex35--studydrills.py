@@ -2,20 +2,22 @@ from sys import exit
 
 def gold_room(): 
 	"""
-	A room with full of gold.
+	A room full of gold.
 	"""
 	print("This room is full of gold. How much do you take?")
 	
 	next = input("> ")
-	if "0" in next or "1" in next:
+	
+	try: 
 		how_much = int(next)
-	else:
-		dead("Man, learn to type a number.")
-		
+	except ValueError: 
+		dead("Man, learn to type a number.")	
+	
 	if how_much < 50:
 		print("Nice, you're not greedy, you win!")
 		exit(0)
-	else: 
+	else:
+		how_much>=50
 		dead("You greedy bastard!")
 		
 
@@ -33,7 +35,7 @@ def bear_room():
 		next = input("> ")
 		
 		if next == "take honey": 
-			dead("The bear looks at you then slaps your your face off.")
+			dead("The bear looks at you then slaps your face off.")
 		elif next == "taunt bear" and not bear_moved:
 			print("The bear has moved from the door. You can go through it now.")
 			bear_moved = True
@@ -88,13 +90,3 @@ def start():
 		dead("You stumble around the room until you starve.")
 	
 start()
-		
-		
-		
-		
-	
-	
-	
-	
-	
-	
